@@ -2,6 +2,8 @@ My dotfiles :)
 ----
 ARCH + HYPRLAND
 ----
+using waybar and musikcube mainly, plus some other basic things (rofi, nvim, etc)
+
 CONFIGURE HYPRLAND.CONF AND CHANGE THE DISPLAY AND RESOLUTION BEFORE APPLYINNG
 ----
 Set everything to auto!
