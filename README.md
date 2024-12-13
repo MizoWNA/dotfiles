@@ -13,8 +13,6 @@ Wallpaper:
 
 Some cool shots:
 
-![2024-11-17-234510_hyprshot](https://github.com/user-attachments/assets/97c2cd54-193a-44fd-9b2d-15393b7388bb)
-
 ![2024-12-02-013556_hyprshot](https://github.com/user-attachments/assets/c2597ffc-e954-47fe-8b00-fbf0573291d1)
 
 ![2024-11-27-214801_hyprshot](https://github.com/user-attachments/assets/3d6874a1-0471-4af2-b51e-6996dcbf3046)
