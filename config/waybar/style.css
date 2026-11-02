@@ -1,0 +1,138 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #f0efe8;
+}
+
+tooltip {
+    background: rgba(12, 14, 12, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #f0efe8;
+}
+
+/* segmented glass pills, like the reference's separate HUD blocks */
+#pill-left,
+#pill-center,
+#custom-sysstats,
+#pill-status {
+    background: rgba(20, 22, 20, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+#custom-brand,
+#workspaces,
+#custom-sysstats,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    padding: 0 16px;
+}
+
+#custom-brand {
+    color: #f0efe8;
+    letter-spacing: 2px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button {
+    color: #55554e;
+    padding: 0 4px;
+    font-size: 10px;
+}
+
+#workspaces button.active {
+    color: #e0602a;
+}
+
+#workspaces button.urgent {
+    color: #d9542a;
+}
+
+#workspaces button:hover {
+    color: #8fd94a;
+}
+
+/* the player pill, styled after the reference's PAUSE / scrub / TIME row */
+#custom-media-prev,
+#custom-media-toggle,
+#custom-media-next {
+    color: #e0602a;
+    padding: 0 6px;
+    font-size: 13px;
+}
+
+#custom-media-prev:hover,
+#custom-media-toggle:hover,
+#custom-media-next:hover {
+    color: #8fd94a;
+}
+
+#custom-media-info {
+    padding: 0 16px;
+    letter-spacing: 1px;
+    color: #f0efe8;
+}
+
+#custom-media-info.clock {
+    font-size: 14px;
+}
+
+#custom-media-info.playing {
+    color: #f0efe8;
+    font-size: 13px;
+}
+
+/* first visible child of the center pill still needs left padding */
+#pill-center {
+    padding-left: 4px;
+}
+
+#custom-sysstats {
+    color: #8a8a82;
+    letter-spacing: 1px;
+}
+
+#pulseaudio,
+#network,
+#battery {
+    color: #8a8a82;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+}
+
+#pulseaudio.muted,
+#network.disconnected {
+    color: #55554e;
+}
+
+#battery.warning {
+    color: #e0b34a;
+}
+
+#battery.critical {
+    color: #d9542a;
+}
+
+#battery.charging {
+    color: #8fd94a;
+}
+
+#tray {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 16px;
+}

@@ -1,0 +1,12 @@
+# Local state / caches that shouldn't be shared
+.current_style_index
+*.bak
+*.bak-*
+*.old
+*.swp
+__pycache__/
+*.pyc
+
+# Personal data
+config/waybar/scripts/todo/tasks.txt
+config/htop/htop_history

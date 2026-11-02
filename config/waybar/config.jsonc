@@ -1,0 +1,116 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-top": 10,
+    "margin-left": 16,
+    "margin-right": 16,
+    "spacing": 10,
+    "reload_style_on_change": true,
+
+    "modules-left": ["group/pill-left"],
+    "modules-center": ["group/pill-center"],
+    "modules-right": ["custom/sysstats", "group/pill-status"],
+
+    "group/pill-left": {
+        "orientation": "horizontal",
+        "modules": ["custom/brand", "hyprland/workspaces"]
+    },
+
+    "group/pill-center": {
+        "orientation": "horizontal",
+        "modules": ["custom/media-prev", "custom/media-toggle", "custom/media-next", "custom/media-info"]
+    },
+
+    "group/pill-status": {
+        "orientation": "horizontal",
+        "modules": ["pulseaudio", "network", "battery", "tray"]
+    },
+
+    "custom/brand": {
+        "format": "AVERY",
+        "tooltip": false,
+        "on-click": "killall rofi 2>/dev/null || rofi -show drun"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "○",
+            "active": "●",
+            "urgent": "●"
+        },
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    "custom/media-prev": {
+        "exec": "python3 ~/.config/waybar/scripts/media_prev.py",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "playerctl previous"
+    },
+
+    "custom/media-toggle": {
+        "exec": "python3 ~/.config/waybar/scripts/media_toggle.py",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "playerctl play-pause"
+    },
+
+    "custom/media-next": {
+        "exec": "python3 ~/.config/waybar/scripts/media_next.py",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "playerctl next"
+    },
+
+    "custom/media-info": {
+        "exec": "python3 ~/.config/waybar/scripts/media_info.py",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "playerctl play"
+    },
+
+    "custom/sysstats": {
+        "exec": "python3 ~/.config/waybar/scripts/sysstats.py",
+        "return-type": "json",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "{tooltip}"
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "ETH",
+        "format-disconnected": "OFFLINE",
+        "tooltip-format": "{ifname} — {ipaddr}/{cidr}",
+        "on-click": "kitty -e nmtui"
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTED",
+        "format-source-muted": "MIC OFF",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHG {capacity}%",
+        "format-plugged": "PWR {capacity}%",
+        "tooltip-format": "{capacity}%\n{time}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 12
+    }
+}
